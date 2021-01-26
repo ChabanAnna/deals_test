@@ -1,0 +1,8 @@
+<h1>Отправка файла для обработки</h1>
+
+<form action="{% url 'deals:loader' %}" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <label for="deals_file">Файл для загрузки: </label>
+    <input id="deals_file" type="file" name="deals_file">
+    <input type="submit" value="submit" />
+</form>
